@@ -1,0 +1,20 @@
+#+title: Hide-Away Side Panel with Toggle and Radio Buttons
+
+[[./figure/2020-05-17.png]]
+
+* Button Categories
+** Adding a Toggle Button Category
+  #+begin_src javascript
+let annotationCategory = new ToggleButtonCategory("Annotation")
+annotationCategory.addButton("Foo")
+annotationCategory.addButton("Bar")
+annotationCategory.appendToParent(document.getElementById("panel"))
+  #+end_src
+
+** Adding a Radio Button Category
+  #+begin_src javascript
+let frameCategory = new RadioButtonCategory("Frame")
+frameCategory.addButton("Foo")
+frameCategory.addButton("Bar")
+frameCategory.appendToParent(document.getElementById("panel"))
+  #+end_src
