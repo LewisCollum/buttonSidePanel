@@ -1,0 +1,47 @@
+.Panel {
+    width: 0;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: width 0.25s;
+}
+
+.Panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Panel p {
+    padding: 2px;
+    font-weight: bold;
+    text-align: center;
+    color: lightgrey;
+    background-color: darkslategrey;
+}
+
+.Panel label:hover {
+    background-color: dodgerblue;
+}
+
+.Panel input:checked + label {
+    background-color: darkslateblue;
+}
+
+.Panel input {
+    visibility: hidden;
+    display: none;
+}
+
+.Panel label {
+    font-size: 15px;
+    color: lightgrey;
+    padding-right: 20px;
+    padding-left: 20px;
+    float: left;
+    width: 100%;
+    background-color: #111;
+    background-color: black;    
+}

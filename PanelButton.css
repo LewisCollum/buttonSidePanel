@@ -1,0 +1,15 @@
+.PanelButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+}
+
+.PanelButton:hover {
+    background-color: #444;
+} 

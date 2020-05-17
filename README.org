@@ -2,13 +2,21 @@
 
 [[./figure/2020-05-17.png]]
 
+* Making a Panel
+  #+begin_src javascript
+let panel = new ButtonPanel("panel")
+panel.buttonStyle = "PanelButton"
+panel.panelStyle = "Panel"
+panel.appendToParent(document.getElementById("container"))
+  #+end_src
+
 * Button Categories
 ** Adding a Toggle Button Category
   #+begin_src javascript
 let annotationCategory = new ToggleButtonCategory("Annotation")
 annotationCategory.addButton("Foo")
 annotationCategory.addButton("Bar")
-annotationCategory.appendToParent(document.getElementById("panel"))
+panel.addCategory(annotationCategory)
   #+end_src
 
 ** Adding a Radio Button Category
@@ -16,5 +24,5 @@ annotationCategory.appendToParent(document.getElementById("panel"))
 let frameCategory = new RadioButtonCategory("Frame")
 frameCategory.addButton("Foo")
 frameCategory.addButton("Bar")
-frameCategory.appendToParent(document.getElementById("panel"))
+panel.addCategory(frameCategory)
   #+end_src
