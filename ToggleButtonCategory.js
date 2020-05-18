@@ -29,7 +29,6 @@ var cpanel = cpanel || {};
                 let buttonName = event.target.value
                 let isChecked = document.getElementById(event.target.id).checked
                 this.setButtonState(buttonName, isChecked)
-                console.log(this.onButtons)
             })
             return element
         }
@@ -43,6 +42,10 @@ var cpanel = cpanel || {};
 
         buttonsCurrentlyOn() {
             return this.onButtons
+        }
+
+        asProperty() {
+            return this.category.makeProperty([...this.onButtons])
         }
     }
 })(cpanel)

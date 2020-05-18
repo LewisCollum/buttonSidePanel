@@ -46,5 +46,12 @@ var cpanel = cpanel || {};
             label.setAttribute("for", id)
             return label
         }
+
+        makeProperty(value) {
+            return {
+                key: this.name,
+                value: value
+            }
+        }
     }
 })(cpanel)

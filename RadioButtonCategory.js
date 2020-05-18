@@ -12,7 +12,6 @@ var cpanel = cpanel || {};
             let element = document.createElement('ul')
             element.addEventListener('change', (event) => {
                 this.selection = event.target.value
-                console.log(event.target.value)
             })
             return element
         }
@@ -34,6 +33,10 @@ var cpanel = cpanel || {};
 
         buttonCurrentlySelected() {
             return this.selection
+        }
+
+        asProperty() {
+            return this.category.makeProperty(this.selection)
         }
     }
 })(cpanel)

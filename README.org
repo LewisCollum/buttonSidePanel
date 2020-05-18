@@ -33,3 +33,22 @@ frameCategory.addButton("Bar")
 frameCategory.turnOnButton("Bar") //"Bar" button manually turned on
 panel.addCategory(frameCategory)
   #+end_src
+* JSON Button Change Listening
+  #+begin_src javascript
+panel.addButtonChangeListener((change) => {
+    console.log(change)
+})
+  #+end_src
+
+  The resulting "change" is represented as an object literal:
+  #+begin_src json
+{
+    Annotation: ["Boo", "Foo"],
+    Frame: "Foo"
+}
+  #+end_src
+  
+  We can interpret this object as, we have "Boo" and "Foo" annotation
+  buttons selected, and the current frame button selected is "Foo".
+
+  [[./figure/exampleSelection.png]]

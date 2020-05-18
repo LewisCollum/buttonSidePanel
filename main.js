@@ -15,3 +15,7 @@ frameCategory.addButton("Foo")
 frameCategory.addButton("Bar")
 frameCategory.turnOnButton("Foo")
 panel.addCategory(frameCategory)
+
+panel.addButtonChangeListener((change) => {
+    console.log(change)
+})

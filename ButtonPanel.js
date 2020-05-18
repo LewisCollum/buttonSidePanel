@@ -5,6 +5,7 @@ var cpanel = cpanel || {};
         constructor(name, styleName) {
             this.panel = document.createElement("form")
             this.panel.addEventListener('click', (event) => event.stopPropagation())
+            this.categories = []
             
             this.openButton = document.createElement("button")        
             this.openButton.addEventListener('click', (event) => {
@@ -29,7 +30,19 @@ var cpanel = cpanel || {};
         }
 
         addCategory(category) {
+            this.categories.push(category)
             category.appendToParent(this.panel)
+        }
+
+        addButtonChangeListener(listener) {
+            this.panel.addEventListener('change', (event) => {
+                let change = {}
+                this.categories.forEach((category) => {
+                    let property = category.asProperty()
+                    change[property.key] = property.value
+                })
+                listener(change)
+            })
         }
     }
 })(cpanel)
