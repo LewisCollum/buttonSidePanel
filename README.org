@@ -2,11 +2,12 @@
 
 [[./figure/2020-05-17.png]]
 
-* OpenCV JPEG Stream Example
-  *From my FrostAV repo*
+** OpenCV JPEG Stream Example
+  *From my FrostAV repo* \\
+  
   [[./figure/exampleOpencv.png]]
 
-* Making a Panel
+** Making a Panel
   #+begin_src javascript
 let panel = new cpanel.ButtonPanel("panel")
 panel.buttonStyle = "PanelButton"
@@ -14,8 +15,8 @@ panel.panelStyle = "Panel"
 panel.appendToParent(document.getElementById("container"))
   #+end_src
 
-* Button Categories
-** Adding a Toggle Button Category
+** Button Categories
+*** Adding a Toggle Button Category
   #+begin_src javascript
 let annotationCategory = new cpanel.ToggleButtonCategory("Annotation")
 annotationCategory.addButton("Foo")
@@ -23,21 +24,21 @@ annotationCategory.addButton("Bar")
 panel.addCategory(annotationCategory)
   #+end_src
 
-** Adding a Radio Button Category
+*** Adding a Radio Button Category
   #+begin_src javascript
 let frameCategory = new cpanel.RadioButtonCategory("Frame")
 frameCategory.addButton("Foo")
 frameCategory.addButton("Bar")
 panel.addCategory(frameCategory)
   #+end_src
-** Default Button State 
+*** Default Button State 
   #+begin_src javascript
 let frameCategory = new cpanel.RadioButtonCategory("Frame")
 frameCategory.addButton("Bar")
 frameCategory.turnOnButton("Bar") //"Bar" button manually turned on
 panel.addCategory(frameCategory)
   #+end_src
-* JSON Button Change Listening
+** JSON Button Change Listening
   #+begin_src javascript
 panel.addButtonChangeListener((change) => {
     console.log(change)
