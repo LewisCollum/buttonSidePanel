@@ -2,6 +2,7 @@ class ButtonCategory {
     constructor(name, element) {
         this.name = name
         this.element = element
+        this.buttons = new Map()
     }
 
     appendToParent(parent) {
@@ -14,12 +15,16 @@ class ButtonCategory {
         header.innerHTML = this.name
         return header
     }
-    
-    addButton(name, type) {        
-        let input = this.makeButton(name, type)
-        let label = this.makeLabelFor(name, input.id)
 
-        this.element.appendChild(input)
+    turnOnButton(name) {
+        this.buttons[name].checked = true
+    }
+    
+    addButton(name, type) {
+        this.buttons[name] = this.makeButton(name, type)
+        let label = this.makeLabelFor(name, this.buttons[name].id)
+
+        this.element.appendChild(this.buttons[name])
         this.element.appendChild(label)        
     }
     

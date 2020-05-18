@@ -26,3 +26,10 @@ frameCategory.addButton("Foo")
 frameCategory.addButton("Bar")
 panel.addCategory(frameCategory)
   #+end_src
+** Default Button State 
+  #+begin_src javascript
+let frameCategory = new RadioButtonCategory("Frame")
+frameCategory.addButton("Bar")
+frameCategory.turnOnButton("Bar") //"Bar" button manually turned on
+panel.addCategory(frameCategory)
+  #+end_src

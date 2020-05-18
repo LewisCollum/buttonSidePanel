@@ -15,6 +15,10 @@ class ToggleButtonCategory {
         this.category.addButton(name, buttonType)
     }
 
+    turnOnButton(name) {
+        this.category.turnOnButton(name)        
+    }
+
     makeToggleListeningButtonList() {
         let element = document.createElement('ul')
         element.addEventListener('change', (event) => {

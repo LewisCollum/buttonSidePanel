@@ -24,6 +24,10 @@ class RadioButtonCategory {
         this.category.addButton(name, buttonType)
     }
 
+    turnOnButton(name) {
+        this.category.turnOnButton(name)
+    }
+
     buttonCurrentlySelected() {
         return this.selection
     }
