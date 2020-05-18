@@ -4,7 +4,7 @@
 
 * Making a Panel
   #+begin_src javascript
-let panel = new ButtonPanel("panel")
+let panel = new cpanel.ButtonPanel("panel")
 panel.buttonStyle = "PanelButton"
 panel.panelStyle = "Panel"
 panel.appendToParent(document.getElementById("container"))
@@ -13,7 +13,7 @@ panel.appendToParent(document.getElementById("container"))
 * Button Categories
 ** Adding a Toggle Button Category
   #+begin_src javascript
-let annotationCategory = new ToggleButtonCategory("Annotation")
+let annotationCategory = new cpanel.ToggleButtonCategory("Annotation")
 annotationCategory.addButton("Foo")
 annotationCategory.addButton("Bar")
 panel.addCategory(annotationCategory)
@@ -21,14 +21,14 @@ panel.addCategory(annotationCategory)
 
 ** Adding a Radio Button Category
   #+begin_src javascript
-let frameCategory = new RadioButtonCategory("Frame")
+let frameCategory = new cpanel.RadioButtonCategory("Frame")
 frameCategory.addButton("Foo")
 frameCategory.addButton("Bar")
 panel.addCategory(frameCategory)
   #+end_src
 ** Default Button State 
   #+begin_src javascript
-let frameCategory = new RadioButtonCategory("Frame")
+let frameCategory = new cpanel.RadioButtonCategory("Frame")
 frameCategory.addButton("Bar")
 frameCategory.turnOnButton("Bar") //"Bar" button manually turned on
 panel.addCategory(frameCategory)
