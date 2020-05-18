@@ -2,6 +2,10 @@
 
 [[./figure/2020-05-17.png]]
 
+* OpenCV JPEG Stream Example
+  *From my FrostAV repo*
+  [[./figure/exampleOpencv.png]]
+
 * Making a Panel
   #+begin_src javascript
 let panel = new cpanel.ButtonPanel("panel")
