@@ -1,11 +1,11 @@
 #+title: Hide-Away Side Panel with Toggle and Radio Buttons
 
-[[./figure/2020-05-17.png]]
-
-** OpenCV JPEG Stream Example
-  *From my FrostAV repo* \\
-  
-  [[./figure/exampleOpencv.png]]
+#+begin_html
+<p align="center">
+  <img src="./figure/2020-05-17.png" height="250"/>
+  <img src="./figure/exampleOpencv.png" height="250"/>
+</p>
+#+end_html
 
 ** Making a Panel
   #+begin_src javascript
@@ -55,5 +55,3 @@ panel.addButtonChangeListener((change) => {
   
   We can interpret this object as, we have "Boo" and "Foo" annotation
   buttons selected, and the current frame button selected is "Foo".
-
-  [[./figure/exampleSelection.png]]
