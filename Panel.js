@@ -9,6 +9,8 @@ var cpanel = cpanel || {};
         }
 
         open() {
+            this.panel.style.width = "-moz-min-content"
+            this.panel.style.width = "-webkit-min-content"
             this.panel.style.width = "min-content"
         }
 
