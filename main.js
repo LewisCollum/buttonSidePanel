@@ -1,7 +1,11 @@
-let panel = new cpanel.ButtonPanel("panel")
-panel.buttonStyle = "PanelButton"
-panel.panelStyle = "Panel"
+let panel = new cpanel.Panel("panel")
+panel.style = "Panel"
 panel.appendToParent(document.getElementById("container"))
+
+let openButton = new cpanel.PanelOpenButton(panel)
+openButton.style = "PanelButton"
+openButton.appendToParent(document.getElementById("container"))
+
 
 let annotationCategory = new cpanel.ToggleButtonCategory("Annotation")
 annotationCategory.addButton("Foo")

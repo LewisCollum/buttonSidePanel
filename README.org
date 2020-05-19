@@ -7,14 +7,26 @@
   
   [[./figure/exampleOpencv.png]]
 
-** Making a Panel
+** Making a Collapsible Panel
+   ~PanelOpenButton~ wraps the panel and sets the panel's width when
+   the open button is clicked.
   #+begin_src javascript
-let panel = new cpanel.ButtonPanel("panel")
-panel.buttonStyle = "PanelButton"
-panel.panelStyle = "Panel"
+let panel = new cpanel.Panel("panel")
+panel.style = "Panel"
 panel.appendToParent(document.getElementById("container"))
-  #+end_src
 
+let openButton = new cpanel.PanelOpenButton(panel)
+openButton.style = "PanelButton"
+openButton.appendToParent(document.getElementById("container"))
+  #+end_src
+** Making a Fixed-Width Panel
+   The panel width has to be set, since the style default width is 0.
+  #+begin_src javascript
+let panel = new cpanel.Panel("panel")
+panel.style = "Panel"
+panel.appendToParent(document.getElementById("container"))
+panel.width = "100px"
+  #+end_src   
 ** Button Categories
 *** Adding a Toggle Button Category
   #+begin_src javascript
