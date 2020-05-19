@@ -8,8 +8,12 @@ var cpanel = cpanel || {};
             this.categories = []
         }
 
-        set width(value) {
-            this.panel.style.width = value
+        open() {
+            this.panel.style.width = "min-content"
+        }
+
+        close() {
+            this.panel.style.width = "0"
         }
 
         set style(styleName) {

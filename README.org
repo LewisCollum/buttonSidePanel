@@ -8,8 +8,8 @@
 #+end_html
 
 ** Making a Collapsible Panel
-   ~PanelOpenButton~ wraps the panel and sets the panel's width when
-   the open button is clicked.
+   ~PanelOpenButton~ opens and closes the wrapped panel when the "open
+   button" is clicked.
   #+begin_src javascript
 let panel = new cpanel.Panel("panel")
 panel.style = "Panel"
@@ -20,12 +20,12 @@ openButton.style = "PanelButton"
 openButton.appendToParent(document.getElementById("container"))
   #+end_src
 ** Making a Fixed-Width Panel
-   The panel width has to be set, since the style default width is 0.
+   The panel has to be opened, since it is closed by default (in Panel.css)
   #+begin_src javascript
 let panel = new cpanel.Panel("panel")
 panel.style = "Panel"
 panel.appendToParent(document.getElementById("container"))
-panel.width = "100px"
+panel.open()
   #+end_src   
 ** Button Categories
 *** Adding a Toggle Button Category

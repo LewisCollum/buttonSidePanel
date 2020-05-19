@@ -6,9 +6,9 @@ var cpanel = cpanel || {};
             this.openButton = document.createElement("button")        
             this.openButton.addEventListener('click', (event) => {
                 event.stopPropagation()
-                panel.width = "100px"
+                panel.open()
             })
-            document.addEventListener('click', () => panel.width = "0")
+            document.addEventListener('click', () => panel.close())
             this.openButton.innerHTML = "&#9776;"
         }
 
