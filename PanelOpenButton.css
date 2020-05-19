@@ -1,4 +1,4 @@
-.PanelButton {    
+.PanelOpenButton {    
     position: absolute;
     top: 0;
     right: 0;
@@ -10,6 +10,6 @@
     border: none;
 }
 
-.PanelButton:hover {
+.PanelOpenButton:hover {
     background-color: #444;
 } 

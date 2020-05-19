@@ -3,7 +3,7 @@ panel.style = "Panel"
 panel.appendToParent(document.getElementById("container"))
 
 let openButton = new cpanel.PanelOpenButton(panel)
-openButton.style = "PanelButton"
+openButton.style = "PanelOpenButton"
 openButton.appendToParent(document.getElementById("container"))
 
 
