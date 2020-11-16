@@ -1,10 +1,11 @@
 .Panel {
     width: 0;
     position: absolute;
-    top: 10px;
+    top: 0px;
     left: 0;
     background-color: black;
     overflow-x: hidden;
+    border-radius: 8px;
 }
 
 .Panel ul {
@@ -18,16 +19,16 @@
     padding-right: 10px;    
     font-weight: bold;
     text-align: center;
-    color: lightgrey;
-    background-color: darkslategrey;
+    color: #999999;
+    background-color: #333333;
 }
 
 .Panel label:hover {
-    background-color: dodgerblue;
+    background-color: #222;
 }
 
 .Panel input:checked + label {
-    background-color: darkslateblue;
+    background-color: SteelBlue;
 }
 
 .Panel input {

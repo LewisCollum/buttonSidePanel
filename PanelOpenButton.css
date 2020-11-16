@@ -2,14 +2,13 @@
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 15px;
     cursor: pointer;
-    background-color: #111;
+    background-color: #333;
     color: white;
     padding: 5px 10px;
-    border: none;
+    border-radius: 8px;
+    border: 0px;
 }
-
 .PanelOpenButton:hover {
-    background-color: #444;
-} 
+    background-color: #666;
+}
